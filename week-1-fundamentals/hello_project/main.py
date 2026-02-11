@@ -16,7 +16,14 @@ def calculate_finances(monthly_salary):
     salary_after_tax = yearly_salary * (1 - tax_rate)
     return yearly_salary, salary_after_tax
 
-def display_summary (name, age, monthly_salary, yearly_salary, salary_after_tax):
+def calclute_retirement_savings(salary_after_tax):
+    """Calculate retirement savings from after-tax income."""
+
+    savings_rate  = 0.15
+    retirement_savings = salary_after_tax * savings_rate 
+    return retirement_savings
+
+def display_summary (name, age, monthly_salary, yearly_salary, salary_after_tax, retirement_savings):
     """Print formatted user summary"""
 
     print("\n" + "="*50)
@@ -26,6 +33,7 @@ def display_summary (name, age, monthly_salary, yearly_salary, salary_after_tax)
     print(f"Monthly Salary: ${monthly_salary:,.2f}") 
     print(f"Yearly Salary: ${yearly_salary:,.2f}")
     print(f"After 20% tax: ${salary_after_tax:,.2f}")
+    print(f"Retirement Savings: ${retirement_savings:,.2f}")
     print("="*50)
 
 def main():
@@ -34,7 +42,8 @@ def main():
     print("Welcome to User Profile Generator!")
     name, age, monthly_salary = get_user_input()
     yearly_salary, salary_after_tax = calculate_finances(monthly_salary)
-    display_summary(name, age, monthly_salary, yearly_salary, salary_after_tax)
+    retirement_savings = calclute_retirement_savings(salary_after_tax)
+    display_summary(name, age, monthly_salary, yearly_salary, salary_after_tax, retirement_savings)
 
 if __name__ == "__main__":
     main()
