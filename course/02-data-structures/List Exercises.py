@@ -7,21 +7,21 @@ def sum_list(numbers):
 def find_max(numbers):
   if not numbers:
     return None
-  
+
   current_max = float('-inf')
   for num in numbers:
-    if(num > current_max): current_max = num
+    current_max = max(current_max, num)
   return current_max
 
 def remove_duplicates(items):
   seen = set()
   result = []
   for item in items:
-      if item not in seen:   
+      if item not in seen:
           result.append(item)
           seen.add(item)
 
-  return result           
+  return result
 
 
 def reverse_list(items):
@@ -71,11 +71,11 @@ def find_pairs_sum(numbers, target):
   pairs = []
 
   for num in numbers:
-    complement = target - num 
-    if complement in seen: 
-      pairs.append((complement, num)) 
+    complement = target - num
+    if complement in seen:
+      pairs.append((complement, num))
     seen.add(num)
-  return pairs  
+  return pairs
 
 
 def rotate_list(items, n):
@@ -107,7 +107,7 @@ def find_second_largest(numbers):
   current_max = float("-inf")
   second_max = float("-inf")
   for num in numbers:
-    if num > current_max: current_max = num
+    current_max = max(current_max, num)
   for num in numbers:
     if num < current_max and num > second_max: second_max = num
 
@@ -126,8 +126,8 @@ def flatten_list(nested):
   return result
 
 print("HERE WE GO")
-print(flatten_list([[1, 2], [3, 4]]))          
-print(flatten_list([1, [2, [3, 4]], 5]))       
+print(flatten_list([[1, 2], [3, 4]]))
+print(flatten_list([1, [2, [3, 4]], 5]))
 
 
 def find_missing_number(numbers):
@@ -151,7 +151,7 @@ def merge_sorted_lists(list1, list2):
       i+=1
     else:
       result.append(list2[j])
-      j+=1  
+      j+=1
 
   result.extend(list1[i:])
   result.extend(list2[j:])
@@ -193,8 +193,8 @@ print(move_zeros_to_end([0, 0, 1]))
 
 def longest_increasing_sequence(numbers):
   if not numbers:
-    return 0  
-  
+    return 0
+
   max_length = 1
   current_length = 1
 
@@ -213,7 +213,7 @@ def remove_all(items, value):
   while value in items:
     items.remove(value)
 
-  return items  
+  return items
 
 print("&"*100)
 print(remove_all([1,2,3,2,4,2], 2))
@@ -250,7 +250,7 @@ def rotate_left(items, k):
   k = k % len(items)
   return items[k:] + items[:k]
 
-  
+
 
 print(rotate_left([1,2,3,4,5], 2))
 print(rotate_left([1,2,3], 0))
