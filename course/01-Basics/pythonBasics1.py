@@ -103,42 +103,38 @@ print(d)
 
 # Dictionary
 dictionary = {
-  'a' : [1,2,3],
-  'b' : 'hello',
-  'c': True,
-  123: 'test_1',
-  True: 'test_2',
+    "a": [1, 2, 3],
+    "b": "hello",
+    "c": True,
+    123: "test_1",
+    True: "test_2",
 }
 # the key should be something immutable
-print(dictionary['a'][2])
+print(dictionary["a"][2])
 
-user = {
-  'basket' : [1,2,3],
-  'greet' : 'hello',
-  'age': 20
-}
+user = {"basket": [1, 2, 3], "greet": "hello", "age": 20}
 
-print(user.get('age', 55)) # if you didn't find key 'age' then add the default value 55
-print(user.update({'age' : 100}))
-print(user.pop('age'))
+print(user.get("age", 55))  # if you didn't find key 'age' then add the default value 55
+print(user.update({"age": 100}))
+print(user.pop("age"))
 print(user.popitem())
 print(user.clear())
 
 
 # Tuple
-my_tuple = (1,2,3,4,5,5) # it's immutable
+my_tuple = (1, 2, 3, 4, 5, 5)  # it's immutable
 print(5 in my_tuple)
 
 print(my_tuple.count(5))
 print(my_tuple.index(5))
 
 # Set
-my_set = {1,2,3,4,5}
+my_set = {1, 2, 3, 4, 5}
 print(my_set)
 
 print("#" * 10)
-my_set = {1,2,3,4,5}
-your_set = {4,5,6,7,8,9,10}
+my_set = {1, 2, 3, 4, 5}
+your_set = {4, 5, 6, 7, 8, 9, 10}
 
 print(my_set.difference(your_set))
 # print(my_set.difference_update(your_set))
@@ -147,6 +143,6 @@ print(my_set.intersection(your_set))
 print(my_set.union(your_set))
 print(my_set.isdisjoint(your_set))
 
-small_set = {4,5}
+small_set = {4, 5}
 print(small_set.issubset(your_set))
 print(your_set.issuperset(small_set))
