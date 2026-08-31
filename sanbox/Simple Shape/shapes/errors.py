@@ -1,0 +1,2 @@
+class BadRadiusError(Exception):
+    pass
