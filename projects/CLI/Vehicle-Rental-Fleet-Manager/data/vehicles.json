@@ -1,0 +1,46 @@
+{
+  "next_id": 103,
+  "vehicles": [
+    {
+      "vehicle_type": "Car",
+      "id": 100,
+      "cost": 40,
+      "late_rate": 48.0,
+      "is_rented": true,
+      "history": [
+        {
+          "kind": "rent",
+          "vehicleID": 100,
+          "customer_name": "mazen",
+          "number_days": 2,
+          "timestamp": "2026-09-01T03:03:47.703924",
+          "cost": null
+        },
+        {
+          "kind": "return",
+          "vehicleID": 100,
+          "customer_name": "mazen",
+          "number_days": 0,
+          "timestamp": "2026-09-01T03:04:03.855541",
+          "cost": 0
+        },
+        {
+          "kind": "rent",
+          "vehicleID": 100,
+          "customer_name": "mahmoud",
+          "number_days": 8,
+          "timestamp": "2026-09-01T03:04:27.170212",
+          "cost": null
+        }
+      ]
+    },
+    {
+      "vehicle_type": "Truck",
+      "id": 102,
+      "cost": 65,
+      "late_rate": 100,
+      "is_rented": false,
+      "history": []
+    }
+  ]
+}
